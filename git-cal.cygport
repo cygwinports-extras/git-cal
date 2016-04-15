@@ -1,0 +1,18 @@
+inherit perl
+
+NAME="git-cal"
+VERSION=0.9.1
+RELEASE=1.20150221gitb3bb376
+CATEGORY="Devel"
+SUMMARY="Displays commits calendar for git repos"
+DESCRIPTION="git-cal is a simple script to view commits calendar (similar to
+github contributions calendar) on command line."
+HOMEPAGE="https://github.com/k4rthik/git-cal"
+#SRC_URI="${HOMEPAGE}/archive/v${VERSION}/git-cal-v${VERSION}.tar.gz"
+commit=${RELEASE##*git}e46ebf3d09820b95b3426e9c58ad6cdc9
+SRC_URI="${HOMEPAGE}/archive/${commit}/git-cal-${commit}.tar.gz"
+SRC_DIR="git-cal-${commit}"
+
+ARCH=noarch
+
+REQUIRES="git"
